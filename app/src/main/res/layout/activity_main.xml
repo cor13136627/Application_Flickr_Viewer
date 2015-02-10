@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#202020">
+
+    <ImageView
+        android:id="@+id/imgOne"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/flickr_logo"
+        />
+
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/purple"
+
+        android:layout_below="@+id/imgOne"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnTwo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue"
+
+        android:layout_below="@+id/btnOne"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnThree"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/pink"
+
+        android:layout_below="@+id/btnTwo"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
