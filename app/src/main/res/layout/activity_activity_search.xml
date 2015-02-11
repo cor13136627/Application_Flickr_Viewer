@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.joe.application_flickr_viewer.MainActivity2"
+    android:background="#9F9F9F">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/bluebanner"
+        android:layout_marginTop="-120dp"
+        android:id="@+id/imgBanner"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/cat"
+        android:id="@+id/imgCat"
+        android:layout_below="@+id/imgBanner"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/location"
+        android:id="@+id/imgLocation"
+        android:layout_below="@+id/imgCat"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/cake"
+        android:id="@+id/imgCake"
+        android:layout_below="@+id/imgLocation"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/world"
+        android:id="@+id/imgWorld"
+        android:layout_below="@+id/imgCake"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:src="@drawable/head"
+        android:id="@+id/imgHead"
+        android:layout_marginTop="70dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joe Cory"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="200dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COR13136627"
+        android:layout_marginLeft="100dp"
+        android:textSize="28sp"
+        android:layout_alignBottom="@+id/imgCat"
+        android:layout_marginBottom="4dp"
+        style="@style/AppTheme"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frome, England"
+        android:layout_marginLeft="100dp"
+        android:textSize="28sp"
+        android:layout_alignBottom="@+id/imgLocation"
+        android:layout_marginBottom="4dp"
+        style="@style/AppTheme"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10th December"
+        android:layout_marginLeft="100dp"
+        android:textSize="28sp"
+        android:layout_alignBottom="@+id/imgCake"
+        android:layout_marginBottom="4dp"
+        style="@style/AppTheme"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Development"
+        android:layout_marginLeft="100dp"
+        android:textSize="28sp"
+        android:layout_alignBottom="@+id/imgWorld"
+        android:layout_marginBottom="4dp"
+        style="@style/AppTheme"/>
+</RelativeLayout>
