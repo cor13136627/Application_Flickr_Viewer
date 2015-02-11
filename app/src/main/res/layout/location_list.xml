@@ -15,7 +15,8 @@
         android:textSize="30sp"
         android:text="Hong Kong"
         android:layout_marginLeft="100dp"
-        android:layout_alignTop="@+id/imgFlag"/>
+        android:layout_alignTop="@+id/imgFlag"
+        android:id="@+id/lblCity"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,6 +25,7 @@
         android:text="China"
         android:layout_marginLeft="100dp"
         android:layout_marginBottom="4dp"
-        android:layout_alignBottom="@+id/imgFlag"/>
+        android:layout_alignBottom="@+id/imgFlag"
+        android:id="@+id/lblCountry"/>
 
 </RelativeLayout>
