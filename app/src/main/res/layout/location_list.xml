@@ -10,22 +10,22 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
+        android:id="@+id/lblCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:text="Hong Kong"
         android:layout_marginLeft="100dp"
         android:layout_alignTop="@+id/imgFlag"
-        android:id="@+id/lblCity"/>
+        />
 
     <TextView
+        android:id="@+id/lblCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="China"
         android:layout_marginLeft="100dp"
         android:layout_marginBottom="4dp"
         android:layout_alignBottom="@+id/imgFlag"
-        android:id="@+id/lblCountry"/>
+        />
 
 </RelativeLayout>
