@@ -1,6 +1,7 @@
 package com.example.joe.application_flickr_viewer;
 
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,10 @@ import java.util.List;
 public class Top_Locations extends Activity {
 
 private ListView listLocations;
-private List<String> cities;
-private List<String> countries;
-private List<Integer> flags;
+private List<TopLocationsObject> topLocations;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,51 +27,24 @@ private List<Integer> flags;
 
         listLocations = (ListView) findViewById(R.id.listLocations);
 
-        cities = new ArrayList<>();
-        cities.add("London");
-        cities.add("Paris");
-        cities.add("Berlin");
-        cities.add("Madrid");
-        cities.add("Rome");
-        cities.add("Dublin");
-        cities.add("Brussels");
-        cities.add("Copenhagen");
-        cities.add("Athens");
-        cities.add("Amsterdam");
+        topLocations = new ArrayList<TopLocationsObject>();
 
-        countries = new ArrayList<>();
-        countries.add("England");
-        countries.add("France");
-        countries.add("Germany");
-        countries.add("Spain");
-        countries.add("Italy");
-        countries.add("Ireland");
-        countries.add("Belgium");
-        countries.add("Denmark");
-        countries.add("Greece");
-        countries.add("Netherlands");
-
-        flags = new ArrayList<>();
-        flags.add(R.drawable.england);
-        flags.add(R.drawable.france);
-        flags.add(R.drawable.germany);
-        flags.add(R.drawable.spain);
-        flags.add(R.drawable.italy);
-        flags.add(R.drawable.ireland);
-        flags.add(R.drawable.belgium);
-        flags.add(R.drawable.denmark);
-        flags.add(R.drawable.greece);
-        flags.add(R.drawable.netherlands);
-
-        LocationAdapter adapter = new LocationAdapter(cities);
-
-        listLocations.setAdapter(adapter);
+        topLocations.add(new TopLocationsObject("London","England",R.drawable.england));
+        topLocations.add(new TopLocationsObject("Paris","France",R.drawable.france));
+        topLocations.add(new TopLocationsObject("Berlin","Germany",R.drawable.germany));
+        topLocations.add(new TopLocationsObject("Madrid","Spain",R.drawable.spain));
+        topLocations.add(new TopLocationsObject("Rome","Italy",R.drawable.italy));
+        topLocations.add(new TopLocationsObject("Dublin","Ireland",R.drawable.ireland));
+        topLocations.add(new TopLocationsObject("Brussels","Belgium",R.drawable.belgium));
+        topLocations.add(new TopLocationsObject("Copenhagen","Denmark",R.drawable.denmark));
+        topLocations.add(new TopLocationsObject("Athens","Greece",R.drawable.greece));
+        topLocations.add(new TopLocationsObject("Amsterdam","Netherlands",R.drawable.netherlands));
 
     }
 
-    private class LocationAdapter extends ArrayAdapter<String> {
+    private class LocationAdapter extends ArrayAdapter<TopLocationsObject> {
 
-        public LocationAdapter(List<String> items) {
+        public LocationAdapter(List<TopLocationsObject> items) {
             super(Top_Locations.this, 0, items);
         }
 
@@ -85,13 +60,12 @@ private List<Integer> flags;
             TextView lblCity = (TextView)convertView.findViewById(R.id.lblCity);
             TextView lblCountry = (TextView)convertView.findViewById(R.id.lblCountry);
 
-            String city = cities.get(position);
-            String country = countries.get(position);
-            int flag = flags.get(position);
+            TopLocationsObject location = topLocations.get(position);
 
-            lblCity.setText(city);
-            lblCountry.setText(country);
-            imgFlag.setImageResource(flag);
+            imgFlag.setImageResource(location.getFlagResource());
+            lblCity.setText(location.getCityName());
+            lblCountry.setText(location.getCountryName());
+
             return convertView;
 
         }// end get view
