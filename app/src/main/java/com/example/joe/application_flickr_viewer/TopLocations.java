@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Top_Locations extends Activity {
+public class TopLocations extends Activity {
 
 private ListView listLocations;
 private List<TopLocationsObject> topLocations;
@@ -39,12 +39,15 @@ private List<TopLocationsObject> topLocations;
         topLocations.add(new TopLocationsObject("Athens","Greece",R.drawable.greece));
         topLocations.add(new TopLocationsObject("Amsterdam","Netherlands",R.drawable.netherlands));
 
+        LocationAdapter adapter = new LocationAdapter(topLocations);
+        listLocations.setAdapter(adapter);
+
     }
 
     private class LocationAdapter extends ArrayAdapter<TopLocationsObject> {
 
         public LocationAdapter(List<TopLocationsObject> items) {
-            super(Top_Locations.this, 0, items);
+            super(TopLocations.this, 0, items);
         }
 
         @Override

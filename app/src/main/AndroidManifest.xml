@@ -26,11 +26,11 @@
             android:label="@string/title_activity_activity_search" >
         </activity>
         <activity
-            android:name=".Top_Locations"
+            android:name=".TopLocations"
             android:label="@string/title_activity_top__locations" >
         </activity>
         <activity
-            android:name=".Top_Photographs"
+            android:name=".TopPhotographs"
             android:label="@string/title_activity_top__photographs" >
         </activity>
     </application>

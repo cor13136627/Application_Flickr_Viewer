@@ -6,8 +6,8 @@
         android:id="@+id/imgFlag"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/lblCity"
