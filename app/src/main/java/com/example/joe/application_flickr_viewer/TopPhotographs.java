@@ -2,11 +2,14 @@ package com.example.joe.application_flickr_viewer;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,10 +29,10 @@ public class TopPhotographs extends Activity {
 
         urls = new ArrayList<String>();
 
-        urls.add("#0099CC");
-        urls.add("#9933CC");
-        urls.add("#FF8800");
-        urls.add("#CC0000");
+        urls.add("#ffcc00");
+        urls.add("#f44336");
+        urls.add("#e91e63");
+        urls.add("#9c27b0");
 
         TopImageAdapter adapter = new TopImageAdapter(TopPhotographs.this);
         gridView.setAdapter(adapter);
@@ -62,6 +65,11 @@ public class TopPhotographs extends Activity {
                 convertView = getLayoutInflater().inflate(R.layout.cell_photo, null);
             }
 
+            ImageView imgPhoto = (ImageView)convertView.findViewById(R.id.imgPhoto);
+
+            String url = urls.get(position);
+
+            imgPhoto.setBackgroundColor(Color.parseColor(url));
 
             return convertView;
         }//end get view
