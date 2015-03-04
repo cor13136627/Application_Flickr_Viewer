@@ -65,7 +65,7 @@ public class TopPhotographs extends Activity {
                 convertView = getLayoutInflater().inflate(R.layout.cell_photo, null);
             }
 
-            ImageView imgPhoto = (ImageView)convertView.findViewById(R.id.imgPhoto);
+            TextView imgPhoto = (TextView)convertView.findViewById(R.id.imgPhoto);
 
             String url = urls.get(position);
 
