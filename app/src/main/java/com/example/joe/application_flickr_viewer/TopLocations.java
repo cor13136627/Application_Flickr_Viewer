@@ -50,7 +50,7 @@ private List<TopLocationsObject> topLocations;
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(TopLocations.this, SpecificLocationActivity.class);
 
-                i.putExtra("EXTRA_CITY_NAME", topLocations.get(position).getCityName());
+                i.putExtra("EXTRA_TOP_LOCATION", topLocations.get(position));
 
                 startActivity(i);
             }

@@ -1,7 +1,9 @@
 package com.example.joe.application_flickr_viewer;
 
 
-public class TopLocationsObject {
+import java.io.Serializable;
+
+public class TopLocationsObject implements Serializable{
 
     private String cityName;
     private String countryName;
