@@ -17,7 +17,9 @@ public class SpecificLocationActivity extends Activity {
 
         lblLocationTitle = (TextView)findViewById(R.id.lblLocationTitle);
 
+        String cityName = getIntent().getStringExtra("EXTRA_CITY_NAME");
 
+        lblLocationTitle.setText(cityName);
 
     }
 }
