@@ -1,6 +1,7 @@
 package com.example.joe.application_flickr_viewer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,7 +48,8 @@ private List<TopLocationsObject> topLocations;
         listLocations.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("Flicker_App","Row Clicked");
+                Intent i = new Intent(TopLocations.this, SpecificLocationActivity.class);
+                startActivity(i);
             }
         });
 

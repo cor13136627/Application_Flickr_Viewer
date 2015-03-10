@@ -18,10 +18,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity2"
-            android:label="@string/title_activity_main_activity2" >
-        </activity>
-        <activity
             android:name=".activity_search"
             android:label="@string/title_activity_activity_search" >
         </activity>
@@ -32,6 +28,10 @@
         <activity
             android:name=".TopPhotographs"
             android:label="@string/title_activity_top__photographs" >
+        </activity>
+        <activity
+            android:name=".SpecificLocationActivity"
+            android:label="title_specific_location_activity" >
         </activity>
     </application>
 
