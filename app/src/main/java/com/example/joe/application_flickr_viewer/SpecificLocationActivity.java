@@ -17,9 +17,9 @@ public class SpecificLocationActivity extends Activity {
 
         lblLocationTitle = (TextView)findViewById(R.id.lblLocationTitle);
 
-        TopLocations location = (TopLocations) getIntent().getSerializableExtra("EXTRA_TOP_LOCATION");
+        TopLocationsObject location = (TopLocationsObject) getIntent().getSerializableExtra("EXTRA_TOP_LOCATION");
 
-        lblLocationTitle.setText(location.getCity);
+        lblLocationTitle.setText(location.getCityName());
 
     }
 }
