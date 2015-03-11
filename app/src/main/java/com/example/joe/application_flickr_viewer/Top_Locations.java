@@ -28,16 +28,16 @@ private List<TopLocationsObject> topLocations;
 
         topLocations = new ArrayList<TopLocationsObject>();
 
-        topLocations.add(new TopLocationsObject("London","England",R.drawable.england));
-        topLocations.add(new TopLocationsObject("Paris","France",R.drawable.france));
-        topLocations.add(new TopLocationsObject("Berlin","Germany",R.drawable.germany));
-        topLocations.add(new TopLocationsObject("Madrid","Spain",R.drawable.spain));
-        topLocations.add(new TopLocationsObject("Rome","Italy",R.drawable.italy));
-        topLocations.add(new TopLocationsObject("Dublin","Ireland",R.drawable.ireland));
-        topLocations.add(new TopLocationsObject("Brussels","Belgium",R.drawable.belgium));
-        topLocations.add(new TopLocationsObject("Copenhagen","Denmark",R.drawable.denmark));
-        topLocations.add(new TopLocationsObject("Athens","Greece",R.drawable.greece));
-        topLocations.add(new TopLocationsObject("Amsterdam","Netherlands",R.drawable.netherlands));
+        topLocations.add(new TopLocationsObject("London","England",R.drawable.england,"http://upload.wikimedia.org/wikipedia/commons/3/3a/London_from_a_hot_air_balloon.jpg"));
+        topLocations.add(new TopLocationsObject("Paris","France",R.drawable.france,"http://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg"));
+        topLocations.add(new TopLocationsObject("Berlin","Germany",R.drawable.germany,"http://upload.wikimedia.org/wikipedia/commons/8/83/Berlin_-_Siegessaeule_Aussicht_10-13_img4_Tiergarten_%28cropped%29.jpg"));
+        topLocations.add(new TopLocationsObject("Madrid","Spain",R.drawable.spain,"http://upload.wikimedia.org/wikipedia/commons/4/4e/Monumento_a_Alfonso_XII_de_España_en_los_Jardines_del_Retiro_-_04.jpg"));
+        topLocations.add(new TopLocationsObject("Rome","Italy",R.drawable.italy,"http://upload.wikimedia.org/wikipedia/commons/a/ab/Colosseo_di_Roma_panoramic.jpg"));
+        topLocations.add(new TopLocationsObject("Dublin","Ireland",R.drawable.ireland,"http://upload.wikimedia.org/wikipedia/commons/c/c1/The_Samuel_Beckett_Bridge.jpg"));
+        topLocations.add(new TopLocationsObject("Brussels","Belgium",R.drawable.belgium,"http://upload.wikimedia.org/wikipedia/commons/9/91/Brussels_floral_carpet_B.jpg"));
+        topLocations.add(new TopLocationsObject("Copenhagen","Denmark",R.drawable.denmark,"http://upload.wikimedia.org/wikipedia/commons/7/7c/Christiansborg_Slot_Copenhagen_2014_01.jpg"));
+        topLocations.add(new TopLocationsObject("Athens","Greece",R.drawable.greece,"http://upload.wikimedia.org/wikipedia/commons/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg"));
+        topLocations.add(new TopLocationsObject("Amsterdam","Netherlands",R.drawable.netherlands,"http://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg"));
 
     }
 
