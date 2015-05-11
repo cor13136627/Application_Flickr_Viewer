@@ -5,9 +5,9 @@
     <ImageView
         android:id="@+id/imgOne"
         android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:layout_height="120dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/flickr_logo"
+        android:src="@drawable/logo"
         />
 
     <Button
@@ -17,17 +17,7 @@
         android:background="@drawable/purple"
 
         android:layout_below="@+id/imgOne"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:id="@+id/btnTwo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/blue"
-
-        android:layout_below="@+id/btnOne"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -36,8 +26,30 @@
         android:layout_height="80dp"
         android:background="@drawable/pink"
 
-        android:layout_below="@+id/btnTwo"
+        android:layout_below="@+id/btnOne"
         android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Destinations"
+        android:textColor="#ff9b9b9b"
+        android:layout_below="@+id/btnOne"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Destinations"
+        android:textColor="#ff9b9b9b"
+        android:layout_below="@+id/btnOne"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About This App"
+        android:textColor="#ff9b9b9b"
+        android:layout_below="@+id/btnThree"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

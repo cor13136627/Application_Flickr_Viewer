@@ -21,19 +21,19 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnOne = (Button)findViewById(R.id.btnOne);
+        btnOne = (Button)findViewById(R.id.btnThree);
 
             btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Developer Information",Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(MainActivity.this, activity_search.class);
+                Intent i = new Intent(MainActivity.this, DevInfo.class);
                 startActivity(i);
             }
         });
 
-        btnTwo = (Button)findViewById(R.id.btnTwo);
+        btnTwo = (Button)findViewById(R.id.btnOne);
 
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,18 +41,6 @@ public class MainActivity extends Activity {
                 Toast.makeText(MainActivity.this, "Search Locations",Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(MainActivity.this, TopLocations.class);
-                startActivity(i);
-            }
-        });
-
-        btnThree = (Button)findViewById(R.id.btnThree);
-
-        btnThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Top Photos",Toast.LENGTH_SHORT).show();
-
-                Intent i = new Intent(MainActivity.this, TopPhotographs.class);
                 startActivity(i);
             }
         });

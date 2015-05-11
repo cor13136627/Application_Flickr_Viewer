@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -31,8 +32,6 @@ public class TopPhotographs extends Activity {
 
         urls.add("#ffcc00");
         urls.add("#f44336");
-        urls.add("#e91e63");
-        urls.add("#9c27b0");
 
         TopImageAdapter adapter = new TopImageAdapter(TopPhotographs.this);
         gridView.setAdapter(adapter);
@@ -62,14 +61,17 @@ public class TopPhotographs extends Activity {
 
 
             if (convertView == null) {
-                convertView = getLayoutInflater().inflate(R.layout.cell_photo, null);
+                convertView = getLayoutInflater().inflate(
+                        R.layout.cell_photo, null);
             }
 
-            TextView imgPhoto = (TextView)convertView.findViewById(R.id.imgPhoto);
+            ImageView imgPhoto = (ImageView)convertView.findViewById(R.id.imgPhoto);
 
             String url = urls.get(position);
 
+            Log.d("DANIELLE", "url=" + url);
             imgPhoto.setBackgroundColor(Color.parseColor(url));
+
 
             return convertView;
         }//end get view
