@@ -11,7 +11,7 @@ public interface FlickrService {
 
     @GET("/services/rest/?api_key=acbc91197494fa2a61d712552c0e9ad6&format=" +
             "json&safe_search=1" +
-            "&content_type=1&extras=url_o&method=flickr.photos.search&nojsoncallback=1")
+            "&content_type=1&extras=url_m&method=flickr.photos.search&nojsoncallback=1")
     void getPhotosForLocation(@Query("woe_id") String woe_id, Callback<FlickrResponse> cb);
 
 }
