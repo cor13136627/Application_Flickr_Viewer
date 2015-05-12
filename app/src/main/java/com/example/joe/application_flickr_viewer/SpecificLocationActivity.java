@@ -2,19 +2,24 @@ package com.example.joe.application_flickr_viewer;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Downloader;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.List;
 
 import retrofit.Callback;
@@ -22,10 +27,9 @@ import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class SpecificLocationActivity extends Activity {
+public class SpecificLocationActivity extends Activity implements Serializable {
 
     private TextView lblLocationTitle;
-    private ImageView imgLocation;
     private TopLocationsObject location;
     private List<FlickrResponse.FlickrPhotos.FlickrPhoto> photos;
     private GridView gridView;
@@ -48,6 +52,17 @@ public class SpecificLocationActivity extends Activity {
         gridView = (GridView)findViewById(R.id.gridView);
 
         getDataFromFlickr();
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Intent i = new Intent(SpecificLocationActivity.this, SinglePhoto.class);
+                Toast.makeText(SpecificLocationActivity.this,"Test", Toast.LENGTH_SHORT);
+
+                i.putExtra("URL", photos.get(position).getUrl_m());
+
+            }
+        });
 
     }
 
