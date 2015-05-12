@@ -34,6 +34,10 @@
             android:label="@string/title_activity_top__photographs" >
         </activity>
         <activity
+            android:name=".SinglePhoto"
+            android:label="@string/title_activity_top__photographs" >
+        </activity>
+        <activity
             android:name=".SpecificLocationActivity"
             android:label="title_specific_location_activity" >
         </activity>

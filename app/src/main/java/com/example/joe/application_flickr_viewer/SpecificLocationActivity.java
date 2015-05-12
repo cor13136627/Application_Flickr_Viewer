@@ -57,9 +57,10 @@ public class SpecificLocationActivity extends Activity implements Serializable {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Intent i = new Intent(SpecificLocationActivity.this, SinglePhoto.class);
-                Toast.makeText(SpecificLocationActivity.this,"Test", Toast.LENGTH_SHORT);
 
                 i.putExtra("URL", photos.get(position).getUrl_m());
+
+                startActivity(i);
 
             }
         });
